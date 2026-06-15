@@ -1,0 +1,37 @@
+agent:
+  name: day-trading-agent
+  scan_interval_seconds: 60
+  close_positions_before_close_minutes: 15
+
+watchlist:
+  - SPY
+  - QQQ
+  - AAPL
+  - MSFT
+  - NVDA
+  - AMD
+  - TSLA
+  - META
+
+strategy:
+  name: momentum_rsi
+  timeframe: 5Min
+  lookback_bars: 100
+  ema_fast: 9
+  ema_slow: 21
+  rsi_period: 14
+  rsi_oversold: 35
+  rsi_overbought: 65
+
+risk:
+  max_position_pct: 0.10
+  max_open_positions: 3
+  stop_loss_pct: 0.015
+  take_profit_pct: 0.03
+  max_daily_loss_pct: 0.03
+  min_trade_value: 100
+
+market:
+  timezone: America/New_York
+  open_time: "09:30"
+  close_time: "16:00"
