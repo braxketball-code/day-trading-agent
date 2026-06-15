@@ -2,12 +2,24 @@
 
 An autonomous day trading agent that scans markets, generates signals, manages risk, and executes trades via Alpaca (paper trading by default).
 
+## Get the Full Starter Kit
+
+Want the packaged zip with setup scripts, trade journal, live dashboard, and buyer guides?
+
+**[Paper Trading Bot Starter Kit on Gumroad](https://br83214.gumroad.com)** — $97 (use code `LAUNCH20` for 20% off)
+
+This repo is the open-source core. The kit adds Windows setup wizards, SQLite journal + CSV export, FastAPI dashboard, configuration guides, and email support.
+
+*Educational software only. Not financial advice. Paper trade first.*
+
 ## Features
 
 - **Momentum + RSI strategy** — EMA crossover with RSI confirmation and volume filter
 - **Risk management** — position sizing, stop loss, take profit, daily loss limit
 - **Market hours aware** — only trades during NYSE hours, flattens before close
 - **Paper trading default** — practice with simulated money before going live
+- **Trade journal** — SQLite blotter + daily CSV export (full kit)
+- **Live dashboard** — monitor at `http://127.0.0.1:8765` (full kit)
 
 ## Quick Start
 
@@ -78,6 +90,8 @@ src/
 ├── broker/alpaca.py  # Order execution & data
 ├── strategy/         # Signal generation
 ├── risk/             # Trade approval & exits
+├── journal/          # SQLite trade blotter (full kit)
+├── dashboard/        # Local web UI (full kit)
 └── utils/            # Logging, market hours
 ```
 
